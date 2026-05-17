@@ -1,22 +1,5 @@
 {
-  "version": 2,
-  "framework": "vite",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/_sam/(.*)",
-      "dest": "/_sam/$1",
-      "check": true
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/",
-      "check": true
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
