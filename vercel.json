@@ -1,15 +1,22 @@
 {
   "version": 2,
+  "framework": "vite",
   "builds": [
     {
-      "src": ".output/server/index.mjs",
+      "src": "package.json",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
+      "src": "/_sam/(.*)",
+      "dest": "/_sam/$1",
+      "check": true
+    },
+    {
       "src": "/(.*)",
-      "dest": ".output/server/index.mjs"
+      "dest": "/",
+      "check": true
     }
   ]
 }
