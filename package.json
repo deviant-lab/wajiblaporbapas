@@ -11,6 +11,11 @@
     "lint": "eslint .",
     "format": "prettier --write ."
   },
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "NITRO_PRESET=vercel vinxi build",
+    "start": "vinxi start"
+  },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.25.5",
     "@hookform/resolvers": "^5.2.2",
